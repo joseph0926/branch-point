@@ -1,3 +1,58 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --light: '#ffffff';
+  --dark: '#000000';
+  --primary-100: '#D6E4FF';
+  --primary-200: '#ADC8FF';
+  --primary-300: '#84A9FF';
+  --primary-400: '#6690FF';
+  --primary-500: '#3366FF';
+  --primary-600: '#254EDB';
+  --primary-700: '#1939B7';
+  --primary-800: '#102693';
+  --primary-900: '#091A7A';
+  --success-100: '#F1FDD6';
+  --success-200: '#E0FBAE';
+  --success-300: '#C7F585';
+  --success-400: '#ADEC65';
+  --success-500: '#88E035';
+  --success-600: '#69C026';
+  --success-700: '#4EA11A';
+  --success-800: '#368110';
+  --success-900: '#256B0A';
+  --info-100: '#D8FEFB';
+  --info-200: '#B2FEFC';
+  --info-300: '#8CF7FD';
+  --info-400: '#6FE9FB';
+  --info-500: '#40D4F9';
+  --info-600: '#2EA8D6';
+  --info-700: '#2080B3';
+  --info-800: '#145B90';
+  --info-900: '#0C4277';
+  --warning-100: '#FEFBD7';
+  --warning-200: '#FEF5B0';
+  --warning-300: '#FEEE88';
+  --warning-400: '#FDE76B';
+  --warning-500: '#FCDC3A';
+  --warning-600: '#D8B82A';
+  --warning-700: '#B5971D';
+  --warning-800: '#927612';
+  --warning-900: '#785F0B';
+  --danger-100: '#FEE9D3';
+  --danger-200: '#FECEA8';
+  --danger-300: '#FEAC7D';
+  --danger-400: '#FD8B5D';
+  --danger-500: '#FC5628';
+  --danger-600: '#D8381D';
+  --danger-700: '#B51F14';
+  --danger-800: '#920C0D';
+  --danger-900: '#780710';
+}
+
+*,
+*::after. *::before {
+  box-sizing: border-box;
+}
