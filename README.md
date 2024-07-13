@@ -48,4 +48,8 @@ npm >= 9
 ## 기타
 
 - 로고 출처
+
   - [logoipsum](https://logoipsum.com/)
+
+- 디자인 레퍼런스
+  - [Figma](https://www.figma.com/community/file/1392324069516489187/postman-api-platform-saas-ui?searchSessionId=lyjqsd4l-3k78nub3nbi)
