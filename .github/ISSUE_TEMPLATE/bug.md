@@ -1,5 +1,5 @@
 ---
-name: 버그
+name: 버그 이슈
 about: 버그 이슈
 title: '[BUG] '
 labels: 'bug'

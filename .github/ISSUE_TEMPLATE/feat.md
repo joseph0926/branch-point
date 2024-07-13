@@ -1,5 +1,5 @@
 ---
-name: 기능
+name: 기능 이슈
 about: 기능 이슈
 title: '[FEAT] '
 labels: 'feat'
