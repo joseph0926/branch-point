@@ -1,0 +1,10 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/blocks';
+import colorPalette from './colorPalette';
+
+<Meta title="Theme/Colors" />
+
+<ColorPalette>
+  {Object.entries(colorPalette).map(([key, value]) => (
+    <ColorItem key={key} title={key} colors={value} />
+  ))}
+</ColorPalette>
