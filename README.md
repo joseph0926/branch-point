@@ -1,8 +1,8 @@
-# Thunder Client Web
+# Slack Web
 
 ## 개요
 
-- vsCode 확장 프로그램인 Thunder client의 웹버전을 구축하는 프로젝트입니다
+- Slack의 웹버전을 구축하는 프로젝트입니다
 
 ## 기술 스택
 
@@ -39,7 +39,7 @@ npm >= 9
 ## 기여 방법
 
 - 버그 관련 제보
-  - [Issue](https://github.com/joseph0926/thunder-client-web/issues)
+  - [Issue](https://github.com/joseph0926/slack-web/issues)
 
 ## 팀원
 
@@ -52,4 +52,3 @@ npm >= 9
   - [logoipsum](https://logoipsum.com/)
 
 - 디자인 레퍼런스
-  - [Figma](https://www.figma.com/community/file/1392324069516489187/postman-api-platform-saas-ui?searchSessionId=lyjqsd4l-3k78nub3nbi)
