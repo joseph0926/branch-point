@@ -5,8 +5,8 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Thunder Client Web',
-  description: 'Thunder Client의 웹버전을 구축합니다',
+  title: 'Slack Web',
+  description: 'Slack의 웹버전을 구축합니다',
   icons: {
     icon: '/logo.svg',
   },
