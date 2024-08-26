@@ -1,54 +1,36 @@
-# Slack Web
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## 개요
+## Getting Started
 
-- Slack의 웹버전을 구축하는 프로젝트입니다
+First, run the development server:
 
-## 기술 스택
-
-- NextJs v14^
-- Tailwind, Framer motion
-
-## 프로젝트 구조
-
-```
-<root>/
-```
-
-### 사전 요구사항
-
-```shell
-node >= 20
-npm >= 9
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-## 설치 및 실행 방법
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-```shell
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-```
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## 주요 기능
+## Learn More
 
--
+To learn more about Next.js, take a look at the following resources:
 
-## 테스트
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## 배포
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## 기여 방법
+## Deploy on Vercel
 
-- 버그 관련 제보
-  - [Issue](https://github.com/joseph0926/slack-web/issues)
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-## 팀원
-
-- 1인 개발 / 김영훈 / rkekqmf0926@gmail.com
-
-## 기타
-
-- 로고 출처
-
-  - [logoipsum](https://logoipsum.com/)
-
-- 디자인 레퍼런스
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
