@@ -3,6 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import { useUpdateSearchParams } from "@/hooks/useUpdateSearchParams";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { SignCard } from "./sign-card";
@@ -14,6 +15,9 @@ export function SignInCard() {
   const router = useRouter();
   const { createQueryString } = useUpdateSearchParams(searchParams);
 
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+
   return (
     <SignCard
       title="Login to continue"
@@ -22,16 +26,16 @@ export function SignInCard() {
       <form className="space-y-2.5">
         <Input
           disabled={false}
-          value=""
-          onChange={() => {}}
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           placeholder="Email"
           type="email"
           required
         />
         <Input
           disabled={false}
-          value=""
-          onChange={() => {}}
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
           placeholder="Password"
           type="password"
           required

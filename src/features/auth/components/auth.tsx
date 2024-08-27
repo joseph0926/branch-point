@@ -24,7 +24,7 @@ export function Auth() {
   return (
     <div className="h-full flex items-center justify-center">
       <div className="md:h-auto md:w-[420px]">
-        {type === "signIn" ? <SignInCard /> : <SignUpCard />}
+        {type === "signUp" ? <SignUpCard /> : <SignInCard />}
       </div>
     </div>
   );
