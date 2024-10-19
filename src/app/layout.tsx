@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { NextUIProvider } from "@/providers/next-ui.provider";
 
 const pretendard = localFont({
   src: "./fonts/PretendardVariable.woff2",
@@ -20,10 +19,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko">
-      <body className={`${pretendard.className} antialiased`}>
-        <NextUIProvider>{children}</NextUIProvider>
-      </body>
+    <html lang="ko" suppressHydrationWarning>
+      <body className={`${pretendard.className} antialiased`}>{children}</body>
     </html>
   );
 }
