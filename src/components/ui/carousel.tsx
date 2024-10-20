@@ -7,13 +7,9 @@ import React, {
   createContext,
   useContext,
 } from "react";
-import {
-  IconArrowNarrowLeft,
-  IconArrowNarrowRight,
-  IconX,
-} from "@tabler/icons-react";
+import { IconArrowNarrowLeft, IconArrowNarrowRight } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Image, { ImageProps } from "next/image";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 
@@ -22,11 +18,10 @@ interface CarouselProps {
   initialScroll?: number;
 }
 
-type Card = {
+type CardProps = {
   src: string;
   title: string;
   category: string;
-  content: React.ReactNode;
 };
 
 export const CarouselContext = createContext<{
@@ -101,14 +96,9 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
             className={cn(
               "absolute right-0  z-[1000] h-auto  w-[5%] overflow-hidden bg-gradient-to-l"
             )}
-          ></div>
+          />
 
-          <div
-            className={cn(
-              "flex flex-row justify-start gap-4 pl-4",
-              "max-w-7xl mx-auto" // remove max-w-4xl if you want the carousel to span the full width of its container
-            )}
-          >
+          <div className={cn("flex flex-row justify-start gap-4 pl-4")}>
             {items.map((item, index) => (
               <motion.div
                 initial={{
@@ -159,7 +149,7 @@ export const Card = ({
   index,
   layout = false,
 }: {
-  card: Card;
+  card: CardProps;
   index: number;
   layout?: boolean;
 }) => {
@@ -197,46 +187,6 @@ export const Card = ({
 
   return (
     <>
-      <AnimatePresence>
-        {open && (
-          <div className="fixed inset-0 h-screen z-50 overflow-auto">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="bg-black/80 backdrop-blur-lg h-full w-full fixed inset-0"
-            />
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              ref={containerRef}
-              layoutId={layout ? `card-${card.title}` : undefined}
-              className="max-w-5xl mx-auto bg-white dark:bg-neutral-900 h-fit  z-[60] my-10 p-4 md:p-10 rounded-3xl font-sans relative"
-            >
-              <button
-                className="sticky top-4 h-8 w-8 right-0 ml-auto bg-black dark:bg-white rounded-full flex items-center justify-center"
-                onClick={handleClose}
-              >
-                <IconX className="h-6 w-6 text-neutral-100 dark:text-neutral-900" />
-              </button>
-              <motion.p
-                layoutId={layout ? `category-${card.title}` : undefined}
-                className="text-base font-medium text-black dark:text-white"
-              >
-                {card.category}
-              </motion.p>
-              <motion.p
-                layoutId={layout ? `title-${card.title}` : undefined}
-                className="text-2xl md:text-5xl font-semibold text-neutral-700 mt-4 dark:text-white"
-              >
-                {card.title}
-              </motion.p>
-              <div className="py-10">{card.content}</div>
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
         onClick={handleOpen}
@@ -278,21 +228,23 @@ export const BlurImage = ({
 }: ImageProps) => {
   const [isLoading, setLoading] = useState(true);
   return (
-    <Image
-      className={cn(
-        "transition duration-300",
-        isLoading ? "blur-sm" : "blur-0",
-        className
-      )}
-      onLoad={() => setLoading(false)}
-      src={src}
-      width={width}
-      height={height}
-      loading="lazy"
-      decoding="async"
-      blurDataURL={typeof src === "string" ? src : undefined}
-      alt={alt ? alt : "Background of a beautiful view"}
-      {...rest}
-    />
+    <div className="relative w-full h-full">
+      <Image
+        className={cn(
+          "transition duration-300 object-cover",
+          isLoading ? "blur-sm" : "blur-0",
+          className
+        )}
+        onLoad={() => setLoading(false)}
+        src={src}
+        width={width}
+        height={height}
+        loading="lazy"
+        decoding="async"
+        blurDataURL={typeof src === "string" ? src : undefined}
+        alt={alt ? alt : "Background of a beautiful view"}
+        {...rest}
+      />
+    </div>
   );
 };

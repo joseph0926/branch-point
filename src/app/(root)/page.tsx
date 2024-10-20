@@ -1,19 +1,15 @@
-import { Book } from "@/components/home/book";
+import { Feature } from "@/components/home/feature";
 import { Hero } from "@/components/home/hero";
 import { Time } from "@/components/home/time";
-import { ExpandableCardDemo } from "@/components/ui/expand-card";
+import { ExpandableCard } from "@/components/ui/expand-card";
 
 export default function HomePage() {
   return (
-    <div>
+    <div className="w-full px-10 flex items-center flex-col gap-4">
       <Hero />
-      <div className="flex justify-center items-center">
-        <div className="flex-1">
-          <Book />
-        </div>
-        <div className="flex-1">
-          <ExpandableCardDemo />
-        </div>
+      <Feature />
+      <div className="w-full mb-6 mt-20">
+        <ExpandableCard />
       </div>
       <Time />
     </div>

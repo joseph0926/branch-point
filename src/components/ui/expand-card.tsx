@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 import { cardItem } from "@/constants/data";
 
-export function ExpandableCardDemo() {
+export function ExpandableCard() {
   const [active, setActive] = useState<
     (typeof cardItem)[number] | boolean | null
   >(null);
@@ -127,7 +127,7 @@ export function ExpandableCardDemo() {
           </div>
         ) : null}
       </AnimatePresence>
-      <ul className="max-w-2xl mx-auto w-full gap-4">
+      <ul className="w-full gap-4">
         {cardItem.map((card) => (
           <motion.div
             layoutId={`card-${card.title}-${id}`}
