@@ -1,14 +1,19 @@
 {
   "name": "server",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tsx watch src/index.ts",
+    "format": "prettier --w 'src/**/*.{ts,tsx,js,jsx,json,css,md}'"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "dependencies": {
+    "@hono/node-server": "^1.13.2",
+    "hono": "^4.6.6"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "prettier": "^3.3.3",
+    "tsx": "^4.7.1"
+  },
   "engines": {
     "node": ">=21",
     "pnpm": ">=9"
