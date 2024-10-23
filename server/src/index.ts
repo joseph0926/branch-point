@@ -12,6 +12,7 @@ import {
   securityHeaders,
   sqlInjectionProtection,
 } from './middleware/security.middleware.js';
+import { auth } from './routes/auth.route.js';
 
 const PORT = 8000;
 
@@ -29,9 +30,12 @@ app.use('*', sqlInjectionProtection);
 app.use('*', honoLogger());
 app.use('*', errorHandler);
 
-app.get('/', (c) => {
+app.route('/api/auth', auth);
+
+app.get('/health', (c) => {
   return c.json({
-    message: 'Hello Hono!',
+    status: 'ok',
+    timestamp: new Date().toISOString(),
   });
 });
 
